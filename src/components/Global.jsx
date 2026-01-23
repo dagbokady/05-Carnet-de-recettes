@@ -1,5 +1,5 @@
 
-export function Navbar() {
+export function Navbar({setActive}) {
     return (
         <nav className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-30 backdrop-blur-sm bg-opacity-90">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,7 +16,8 @@ export function Navbar() {
 
                     <div className="flex items-center gap-4 md:gap-6">
 
-                        <button className="px-4 py-2 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-colors shadow-sm">
+                        <button className="px-4 py-2 bg-orange-600 text-white font-medium rounded-lg hover:bg-orange-700 transition-colors shadow-sm"
+                        onClick={() => setActive(true)}>
                         Ajouter Recette
                         </button>
 
