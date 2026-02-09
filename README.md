@@ -1,6 +1,11 @@
 
 # 🍽️ Application Web de Recettes de Cuisine
 
+## 🖼️ Aperçu de l’application
+
+![Aperçu de l'application](public/img.png)
+
+---
 ## 📋 Description
 
 Projet 06 de la série **100 projets en 1 an**
@@ -147,11 +152,6 @@ Ce projet est libre de réutilisation et de modification à des fins éducatives
 
 ---
 
-## 🖼️ Aperçu de l’application
-
-![Aperçu de l'application](public/img.png)
-
----
 
 ## ✉️ Contact
 
