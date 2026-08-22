@@ -1,45 +1,80 @@
-@import "tailwindcss" ;
-@import '@fontsource/inter';
+@import "tailwindcss";
+
+@theme {
+  --color-rausch: #ff385c;
+  --color-rausch-active: #e00b41;
+  --color-rausch-disabled: #ffd1da;
+  --color-ink: #222222;
+  --color-body: #3f3f3f;
+  --color-muted: #6a6a6a;
+  --color-muted-soft: #929292;
+  --color-hairline: #dddddd;
+  --color-hairline-soft: #ebebeb;
+  --color-border-strong: #c1c1c1;
+  --color-surface-soft: #f7f7f7;
+  --color-surface-strong: #f2f2f2;
+  --color-danger: #c13515;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 32px;
+
+  --font-sans: 'Airbnb Cereal VF', Circular, Inter, -apple-system, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+}
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-]
-  color: rgba(255, 255, 255, 0.87);
-
+  font-family: var(--font-sans);
+  color: #222222;
+  background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#root{
-    margin: auto;
-}
 
 body {
-  margin: 0 auto;
-  display: flex;
-  place-items: center;
+  margin: 0;
   min-width: 320px;
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Unique palier d'élévation du système */
+@utility elev-1 {
+  box-shadow: rgba(0, 0, 0, 0.02) 0 0 0 1px, rgba(0, 0, 0, 0.04) 0 2px 6px 0,
+    rgba(0, 0, 0, 0.1) 0 4px 8px 0;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  cursor: pointer;
-  transition: border-color 0.25s;
+button { font-family: inherit; cursor: pointer; }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { scrollbar-width: none; }
+
+.print-only { display: none; }
+
+/* ---------- Impression / export PDF ---------- */
+@media print {
+  @page { margin: 16mm; }
+
+  header, footer, .no-print { display: none !important; }
+
+  body { background: #fff; }
+
+  .print-sheet {
+    max-width: none !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  /* Une seule colonne, pas de rail collant */
+  .print-body { display: block !important; }
+  .print-photo img { max-height: 90mm; object-fit: cover; }
+
+  /* Ne pas couper une étape ou un bloc au milieu d'une page */
+  li, section { break-inside: avoid; }
+  h2 { break-after: avoid; }
+
+  .print-only { display: block !important; }
+
+  a { text-decoration: none; color: #222; }
 }
-
-

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <g fill="#ff385c">
+    <!-- couvercle -->
+    <circle cx="16" cy="6.5" r="2"/>
+    <rect x="3.5" y="8.5" width="25" height="4" rx="2"/>
+    <!-- anses -->
+    <rect x="1" y="15" width="5" height="3.5" rx="1.75"/>
+    <rect x="26" y="15" width="5" height="3.5" rx="1.75"/>
+    <!-- corps -->
+    <path d="M5 14h22v6.5A7.5 7.5 0 0 1 19.5 28h-7A7.5 7.5 0 0 1 5 20.5V14Z"/>
+  </g>
+</svg>
